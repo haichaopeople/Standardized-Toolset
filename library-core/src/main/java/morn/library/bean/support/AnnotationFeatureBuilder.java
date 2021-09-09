@@ -1,0 +1,137 @@
+package morn.library.bean.support;
+
+import java.lang.annotation.Annotation;
+import lombok.ToString;
+import morn.library.bean.AnnotationFeature;
+import morn.library.bean.annotation.*;
+import org.springframework.util.Assert;
+
+/**
+ * 注解特性构建器
+ *
+ */
+@ToString
+public class AnnotationFeatureBuilder {
+
+  /**
+   * 名称
+   *
+   * @see Name
+   * @see Function
+   */
+  private String name;
+
+  /**
+   * 标签
+   *
+   * @see Tag
+   */
+  private final Tags tags;
+
+  /**
+   * 源类型
+   *
+   * @see Source
+   */
+  private Class<?> source;
+
+  /**
+   * 目标类型
+   *
+   * @see Target
+   */
+  private Class<?> target;
+
+  private AnnotationFeatureBuilder() {
+    this.tags = Tags.empty();
+  }
+
+  /**
+   * 设置名称
+   */
+  public AnnotationFeatureBuilder name(String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * 添加注解标签
+   *
+   * @param annotation 注解类
+   * @param value 注解值
+   */
+  public AnnotationFeatureBuilder tag(Class<? extends Annotation> annotation, Object value) {
+    this.tags.add(annotation, value);
+    return this;
+  }
+
+  /**
+   * 设置标签
+   *
+   * @param tags 标签数组
+   */
+  public AnnotationFeatureBuilder tags(String... tags) {
+    this.tags.set(tags);
+    return this;
+  }
+
+  public AnnotationFeatureBuilder source(Class<?> source) {
+    this.source = source;
+    return this;
+  }
+
+  public AnnotationFeatureBuilder target(Class<?> target) {
+    this.target = target;
+    return this;
+  }
+
+  public AnnotationFeature build() {
+    return new SimpleAnnotationFeature(name, tags.toArray(), source, target);
+  }
+
+  /**
+   * 创建空的注解特征构建器
+   */
+  public static AnnotationFeatureBuilder empty() {
+    return new AnnotationFeatureBuilder();
+  }
+
+  public static AnnotationFeatureBuilder fromFeature(AnnotationFeature feature) {
+    return new AnnotationFeatureBuilder()
+        .name(feature.getName())
+        .tags(feature.getTags())
+        .source(feature.getSource())
+        .target(feature.getTarget());
+  }
+
+  public static AnnotationFeatureBuilder withName(String name) {
+    return new AnnotationFeatureBuilder().name(name);
+  }
+
+  public static AnnotationFeatureBuilder withTag(Class<? extends Annotation> annotation,
+      Object value) {
+    return new AnnotationFeatureBuilder().tag(annotation, value);
+  }
+
+  public static AnnotationFeatureBuilder withTags(String... tags) {
+    return new AnnotationFeatureBuilder().tags(tags);
+  }
+
+  public static AnnotationFeatureBuilder withSource(Class<?> source) {
+    return new AnnotationFeatureBuilder().source(source);
+  }
+
+  public static AnnotationFeatureBuilder withSource(Object source) {
+    Assert.notNull(source, "源类型对象不能为空");
+    return new AnnotationFeatureBuilder().source(source.getClass());
+  }
+
+  public static AnnotationFeatureBuilder withTarget(Class<?> target) {
+    return new AnnotationFeatureBuilder().target(target);
+  }
+
+  public static AnnotationFeatureBuilder withTarget(Object target) {
+    Assert.notNull(target, "目标类型对象不能为空");
+    return new AnnotationFeatureBuilder().target(target.getClass());
+  }
+}

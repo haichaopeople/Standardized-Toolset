@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>Standard-Toolset</artifactId>
+    <groupId>site.morn.boot</groupId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>library-boot-autoconfigure</artifactId>
+
+  <dependencies>
+    <!--Spring-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-messaging</artifactId>
+    </dependency>
+    <!--Spring Boot-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-aop</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <!--Morn Boot-->
+    <dependency>
+      <groupId>site.morn.boot</groupId>
+      <artifactId>library-boot-interpreter</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>site.morn.boot</groupId>
+      <artifactId>library-boot-json</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>site.morn.boot</groupId>
+      <artifactId>library-boot-netty</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>site.morn.boot</groupId>
+      <artifactId>library-boot-rocket</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>site.morn.boot</groupId>
+      <artifactId>library-boot-security</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <!--Netty-->
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-all</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <!--Shiro-->
+    <dependency>
+      <groupId>org.apache.shiro</groupId>
+      <artifactId>shiro-core</artifactId>
+      <version>${shiro.version}</version>
+      <optional>true</optional>
+    </dependency>
+    <!--Jackson Hibernate-->
+    <dependency>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
+      <artifactId>jackson-datatype-hibernate5</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <!--MessageRocket-->
+    <dependency>
+      <groupId>org.apache.rocketmq</groupId>
+      <artifactId>rocketmq-spring-boot-starter</artifactId>
+      <version>${rocket.version}</version>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+  </build>
+
+</project>

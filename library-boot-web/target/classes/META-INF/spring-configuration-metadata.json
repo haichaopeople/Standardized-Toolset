@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "morn.web",
+      "type": "morn.library.boot.web.config.WebProperties",
+      "sourceType": "morn.library.boot.web.config.WebProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "morn.web.white-list",
+      "type": "java.util.List<java.lang.String>",
+      "description": "白名单",
+      "sourceType": "morn.library.boot.web.config.WebProperties"
+    }
+  ],
+  "hints": []
+}

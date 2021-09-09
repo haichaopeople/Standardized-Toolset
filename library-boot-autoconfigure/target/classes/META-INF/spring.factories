@@ -1,0 +1,16 @@
+#ָ��������
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  morn.library.boot.autoconfigure.BaseAutoConfiguration,\
+  morn.library.boot.autoconfigure.BeanAutoConfiguration,\
+  morn.library.boot.autoconfigure.CipherAutoConfiguration,\
+  morn.library.boot.autoconfigure.ExceptionAutoConfiguration,\
+  morn.library.boot.autoconfigure.JsonAutoConfiguration,\
+  morn.library.boot.autoconfigure.MultipartCacheAutoConfiguration,\
+  morn.library.boot.autoconfigure.NettyAutoConfiguration,\
+  morn.library.boot.autoconfigure.OperateAutoConfiguration,\
+  morn.library.boot.autoconfigure.RestAutoConfiguration,\
+  morn.library.boot.autoconfigure.TaskAutoConfiguration,\
+  morn.library.boot.autoconfigure.TranslatorAutoConfiguration,\
+  morn.library.boot.autoconfigure.WebAutoConfiguration,\
+  morn.library.boot.autoconfigure.message.MessageAutoConfiguration,\
+  morn.library.boot.autoconfigure.message.RocketAutoConfiguration

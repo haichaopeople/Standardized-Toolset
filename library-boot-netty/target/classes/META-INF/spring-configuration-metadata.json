@@ -1,0 +1,83 @@
+{
+  "groups": [
+    {
+      "name": "morn.netty",
+      "type": "morn.library.boot.netty.config.NettyProperties",
+      "sourceType": "morn.library.boot.netty.config.NettyProperties"
+    },
+    {
+      "name": "morn.netty.client",
+      "type": "morn.library.boot.netty.config.NettyClientProperties",
+      "sourceType": "morn.library.boot.netty.config.NettyClientProperties"
+    },
+    {
+      "name": "morn.netty.coders",
+      "type": "morn.library.boot.netty.config.NettyProperties$Coders",
+      "sourceType": "morn.library.boot.netty.config.NettyProperties",
+      "sourceMethod": "getCoders()"
+    },
+    {
+      "name": "morn.netty.server",
+      "type": "morn.library.boot.netty.config.NettyServerProperties",
+      "sourceType": "morn.library.boot.netty.config.NettyServerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "morn.netty.client.connect-delay",
+      "type": "java.lang.Long",
+      "description": "Reconnection interval. @apiNote 重连间隔",
+      "sourceType": "morn.library.boot.netty.config.NettyClientProperties",
+      "defaultValue": 4
+    },
+    {
+      "name": "morn.netty.client.max-connections",
+      "type": "java.lang.Integer",
+      "description": "最大连接数",
+      "sourceType": "morn.library.boot.netty.config.NettyClientProperties",
+      "defaultValue": 32
+    },
+    {
+      "name": "morn.netty.client.server-host",
+      "type": "java.lang.String",
+      "description": "Server host. @apiNote 服务端地址",
+      "sourceType": "morn.library.boot.netty.config.NettyClientProperties"
+    },
+    {
+      "name": "morn.netty.client.server-port",
+      "type": "java.lang.Integer",
+      "description": "Server port. @apiNote 服务端端口",
+      "sourceType": "morn.library.boot.netty.config.NettyClientProperties"
+    },
+    {
+      "name": "morn.netty.coders.name",
+      "type": "java.lang.String",
+      "sourceType": "morn.library.boot.netty.config.NettyProperties$Coders",
+      "defaultValue": "hexString"
+    },
+    {
+      "name": "morn.netty.server.auto-start",
+      "type": "java.lang.Boolean",
+      "description": "Automatic start. @apiNote 自动启动",
+      "sourceType": "morn.library.boot.netty.config.NettyServerProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "morn.netty.server.port",
+      "type": "java.lang.Integer",
+      "description": "Listening port. @apiNote 监听端口",
+      "sourceType": "morn.library.boot.netty.config.NettyServerProperties"
+    }
+  ],
+  "hints": [
+    {
+      "name": "morn.netty.client.port",
+      "values": [
+        {
+          "value": 10088,
+          "description": "Default host."
+        }
+      ]
+    }
+  ]
+}

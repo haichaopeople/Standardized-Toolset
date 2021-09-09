@@ -1,0 +1,18 @@
+{
+  "groups": [],
+  "properties": [
+    {
+      "name": "morn.exception.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable exception features for the application.",
+      "defaultValue": true
+    },
+    {
+      "name": "morn.translator.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable translator features for the application.",
+      "defaultValue": true
+    }
+  ],
+  "hints": []
+}

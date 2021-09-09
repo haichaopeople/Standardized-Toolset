@@ -1,0 +1,165 @@
+{
+  "groups": [
+    {
+      "name": "morn.cipher",
+      "type": "morn.library.boot.cipher.CipherProperties",
+      "sourceType": "morn.library.boot.cipher.CipherProperties"
+    },
+    {
+      "name": "morn.cipher.aes",
+      "type": "morn.library.boot.cipher.CipherProperties$AES",
+      "sourceType": "morn.library.boot.cipher.CipherProperties",
+      "sourceMethod": "getAes()"
+    },
+    {
+      "name": "morn.exception",
+      "type": "morn.library.boot.exception.ExceptionProperties",
+      "sourceType": "morn.library.boot.exception.ExceptionProperties"
+    },
+    {
+      "name": "morn.notify",
+      "type": "morn.library.boot.notify.NotifyProperties",
+      "sourceType": "morn.library.boot.notify.NotifyProperties"
+    },
+    {
+      "name": "morn.operate",
+      "type": "morn.library.boot.log.OperateProperties",
+      "sourceType": "morn.library.boot.log.OperateProperties"
+    },
+    {
+      "name": "morn.operate.i18n",
+      "type": "morn.library.boot.log.OperateProperties$I18n",
+      "sourceType": "morn.library.boot.log.OperateProperties",
+      "sourceMethod": "getI18n()"
+    },
+    {
+      "name": "morn.operate.simple",
+      "type": "morn.library.boot.log.OperateProperties$Simple",
+      "sourceType": "morn.library.boot.log.OperateProperties",
+      "sourceMethod": "getSimple()"
+    },
+    {
+      "name": "morn.rest",
+      "type": "morn.library.boot.rest.RestProperties",
+      "sourceType": "morn.library.boot.rest.RestProperties"
+    },
+    {
+      "name": "morn.template",
+      "type": "morn.library.boot.template.TemplateProperties",
+      "sourceType": "morn.library.boot.template.TemplateProperties"
+    },
+    {
+      "name": "morn.translator",
+      "type": "morn.library.boot.translate.TranslateProperties",
+      "sourceType": "morn.library.boot.translate.TranslateProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "morn.cipher.password",
+      "type": "java.lang.String",
+      "description": "全局密码",
+      "sourceType": "morn.library.boot.cipher.CipherProperties"
+    },
+    {
+      "name": "morn.exception.code-suffix",
+      "type": "java.lang.String",
+      "description": "消息编码后缀",
+      "sourceType": "morn.library.boot.exception.ExceptionProperties",
+      "defaultValue": "code"
+    },
+    {
+      "name": "morn.exception.message-suffix",
+      "type": "java.lang.String",
+      "description": "消息后缀",
+      "sourceType": "morn.library.boot.exception.ExceptionProperties",
+      "defaultValue": "message"
+    },
+    {
+      "name": "morn.exception.prefix",
+      "type": "java.lang.String",
+      "description": "前缀",
+      "sourceType": "morn.library.boot.exception.ExceptionProperties",
+      "defaultValue": "error"
+    },
+    {
+      "name": "morn.exception.solution-suffix",
+      "type": "java.lang.String",
+      "description": "解决方案后缀",
+      "sourceType": "morn.library.boot.exception.ExceptionProperties",
+      "defaultValue": "solution"
+    },
+    {
+      "name": "morn.operate.async",
+      "type": "java.lang.Boolean",
+      "description": "设置异步执行操作日志，否则为同步执行",
+      "sourceType": "morn.library.boot.log.OperateProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "morn.operate.mode",
+      "type": "java.lang.String",
+      "description": "操作日志记录模式 @see OperateModes",
+      "sourceType": "morn.library.boot.log.OperateProperties"
+    },
+    {
+      "name": "morn.rest.failure-code",
+      "type": "java.lang.String",
+      "description": "失败编码",
+      "sourceType": "morn.library.boot.rest.RestProperties",
+      "defaultValue": "failure"
+    },
+    {
+      "name": "morn.rest.force-serial",
+      "type": "java.lang.Boolean",
+      "description": "强制序列 <p>全局使用{@link SerialMessage}作为响应消息，包括未使用{@link RestResponse}的REST方法<\/p>",
+      "sourceType": "morn.library.boot.rest.RestProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "morn.rest.message-suffix",
+      "type": "java.lang.String",
+      "description": "消息后缀",
+      "sourceType": "morn.library.boot.rest.RestProperties",
+      "defaultValue": "message"
+    },
+    {
+      "name": "morn.rest.prefix",
+      "type": "java.lang.String",
+      "description": "前缀",
+      "sourceType": "morn.library.boot.rest.RestProperties",
+      "defaultValue": "rest"
+    },
+    {
+      "name": "morn.rest.response-class",
+      "type": "java.lang.Class<?>",
+      "description": "全局响应类型 @see RestConverter",
+      "sourceType": "morn.library.boot.rest.RestProperties"
+    },
+    {
+      "name": "morn.rest.success-code",
+      "type": "java.lang.String",
+      "description": "成功编码",
+      "sourceType": "morn.library.boot.rest.RestProperties",
+      "defaultValue": "success"
+    },
+    {
+      "name": "morn.template.prefix",
+      "type": "java.lang.String",
+      "sourceType": "morn.library.boot.template.TemplateProperties"
+    },
+    {
+      "name": "morn.translator.country",
+      "type": "java.lang.String",
+      "description": "国家",
+      "sourceType": "morn.library.boot.translate.TranslateProperties"
+    },
+    {
+      "name": "morn.translator.language",
+      "type": "java.lang.String",
+      "description": "语言",
+      "sourceType": "morn.library.boot.translate.TranslateProperties"
+    }
+  ],
+  "hints": []
+}
